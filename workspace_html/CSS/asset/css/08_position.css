@@ -1,0 +1,201 @@
+body{
+    height: 200vh;
+    width: 200vw;
+}
+
+.parent{
+    margin-bottom: 30px;
+}
+
+.parent div{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid lightgray;
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+.parent .relative{
+    /*  
+        relative - 원래 위치를 기준으로 이동 함 
+        top, left, right, bottom 연동해서 사용가능
+        원래 내가 가지고 있던 공간이 유지 된다.
+    */
+    position: relative;
+    /* top: 20px; */
+    top: -20px;
+    left: 10px;
+    /* left: 50%;  %도 가능하긴 하나 실무에서 사용하지 않음/실무에서는 px만 사용함*/
+    background-color: #f007;
+}
+
+.parent .absolute{
+    /*
+        부모중에 relative 등 static이 아닌것(없으면 body)기준으로 이동한다
+        absolute: 원래 내 공간은 없어진다.
+    */
+    position: absolute;
+    /* top: 0; */
+    top: 30px;
+    /* left: 0; */
+    /* 
+        오늘쪽에 멀리가면 스크롤이 생기나
+        왼쪽에는 스크롤이 생길수 없다
+    */
+    /* left: -350px; */
+    left: 350px;
+}
+.parent .abs-bottom{
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
+
+.rel {
+    position: relative;
+}
+
+.parent2{
+    border: 1px solid red;
+    width: 100px;
+    background-color: green;
+    color: white; 
+}
+.child2{
+    background-color: rgba(0,0,225,0.5);
+}
+.abs{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.fixed{
+    border: 1px solid red;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.sticky{
+    /*엑셀의 셀고정같은거임 제목 고정할때 사용하는거-*/
+    position:sticky;
+    top: 20px;
+}
+/*
+    z-index는 숫자가 높을수록 맨 앞에 구현 됨 
+    맨위에 절때 노출 희망시 999 혹은 99쓰면 됨 - 건들지 말라라는 뜻
+    단 rel은 순서대로 보여줌
+    z-index는 포지션인 애들만 영향 받음 margin에서는 사용하지 못함
+    */
+.z1{
+    background-color: hotpink;
+
+    top: 5px;
+    left: 20px;
+    height: 50px;
+
+    z-index: 2;
+}
+.z2{
+    background-color: yellow;
+
+    top: -10px;
+    left: -10px;
+    height: 50px;
+
+    z-index: 1;
+}
+.z3{
+    background-color: blue;
+
+    top: -75px;
+    left: 50px;
+    height: 50px;
+
+    z-index: 99;
+}
+
+/* 
+    마우스 올리면 맨위로 올라옴 / 
+    마우스가 있다면 hover를 적용해라/가상 선택자
+*/
+.rel:hover{
+    z-index: 999;
+    box-shadow: 0 0 10px 10px red;
+    /* top:-2px;*/
+}
+
+/* -- 헤든 메뉴 만들기 --*/
+
+.menu{
+    border: 1px solid red;
+}
+
+.menu:hover .submenu {
+    border: 1px solid red;
+    display: block;
+}
+/* menu 바로 아래 현제는 + 얖 작성하면 형제가 잡힘/ 
+    바로 다음형제 하나만 잡을떄 사용
+.menu + div{
+    border: 1px solid blue;
+}*/
+
+.submenu {
+    border: 1px solid blue;
+    display: none;
+}
+
+.A li{
+    border: 1px solid red;
+    text-align: center;
+    font-size: 25px;
+    display: inline-block; /*박스사이즈 잡아줌*/
+    width: 180px;
+}
+
+ul:hover + .B {
+    border: 1px solid blue;
+    display: none;
+}
+.B {
+    display: block;
+}
+
+
+.p1{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+}
+.c1{
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: calc((200px/2) - (100px/2));
+    /*calc 칼크 - 수학 나누기 계산임 계산을 해달라 라고 했을때*/
+    /* -,+ 양쪽에 공백 필수*/
+    left: calc(50% - (100px/2));
+}
+/*:쓰면 모든 대상을 뜻함 변수로 정의함
+이렇게 넣어놓고 원하는 색을 찾아서 사용할수 있다
+*/
+:root {
+    --menu-color: rgba(255,0,0,0.214);
+
+}
+
+.p1 {
+    background-color: var(--menu-color);
+}

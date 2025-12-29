@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pixel- 해당 디스플레이의 절대적인 크기를 뜻한다 */
+        #pixel .box1{
+            /*배경색 바꾸기/ background 컬러는 상속이 안된다. */
+            background-color: rgb(255,0,0);
+            /*폰트색상 , 자식한테 상속된다 */
+            /*color: #0F0 같은 글씨일때 줄여서 사용해도 됨 축약형*/
+            color: #00FF00;
+
+            /*폰트크기, 상속 */
+
+            font-size: 16px;
+        }
+        #pixel .box1 .box2 {
+            background-color: rgba(0, 0, 225, 0.4);
+
+            color: #0000ffdf;
+
+            font-size: 32px;
+        }
+
+        #pixel .box3{
+            font-size: 16px;
+        }
+
+        /*%-상대적인 크기 */
+        #percent .box1{
+            font-size: 150%;
+        }
+        #percent .box1 .box2{
+            font-size: 150%;
+        }
+        #percent .box1 .box2 .box3{
+            font-size: 150%;
+        }
+        #em .box1{
+            font-size: 1.5em;
+         }
+        #em .box1 .box2{
+            font-size: 1.5em;
+        }
+        /*rem = root em은 루트라는 뜻임  / 글씨는 em을 더 많이 사용함*/
+        #em .box1 .box2 .box3{
+            font-size: 1rem;
+        }
+        
+        /*[id^=v]* 솔리드는 실선, 보더는 테두리 */
+        #v1, #v2, #v3, #v4{
+            border:1px solid green;
+            margin: 10px;
+        }
+
+        #v1{
+            /* height:20px; Vh-뷰포트 높이, 지금보고 있는 내 화면에 높이를 100/1로 쪼갠거 - 1vh
+            viewport(화면)의 height(높이)를 1/100 쪼갠 크기*/
+            height: 100vh;
+        }
+
+        #v2{
+             /* 50vw- 넓이 
+             vw-viewport(화면)의 width(넓이)를 1/100 쪼갠 크기*/
+            height: 20px;
+            width: 50vW;
+        }
+
+        #v3{
+            /* vmin - 화면의 너비와 높이 중에서 작은 값을 1/100으로 쪼갠 크기 */
+            height: 100vmin;
+        }
+
+        #v4{
+            /* vmax - 화면의 너비와 높이 중에서 큰 값을 1/100 쪼갠 크기 */
+            height: 100vmax;
+        }
+
+    </style>
+</head>
+<body>
+    기본글씨 abc Wi ABC 123 <br>
+    <div id="pixel">
+        <div class="box1">
+            box1
+            <div class="box2">
+                box2
+                <div class="box3">
+                    box3
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div id="percent">
+        <div class="box1">
+            box1-150%
+            <div class="box2">
+                box2-150%
+                <div class="box3">
+                    box3-150%
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div id="em">
+        <div class="box1">
+            box1-1.5em
+            <div class="box2">
+                box2-1.5em
+                <div class="box3">
+                    box3-1.5rem
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="v1"></div>
+    <div id="v2"></div>
+    <div id="v3"></div>
+    <div id="v4"></div>
+
+
+</body>
+</html>

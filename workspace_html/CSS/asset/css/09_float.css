@@ -1,0 +1,55 @@
+article img {
+    width: 200px;
+/*  사진을 피해서 글씨를 작성해줌
+    float 요소를 피해서 글씨가 작성된다
+    좌우배치만 가능 , 그 외는 없음
+*/
+    float: left;
+    float: right;
+}
+.box{
+    border: 1px solid red;
+
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.box.left {
+    border: 1px solid blue;
+    float: left;
+}
+.box.right {
+    float: right;
+}
+
+.div3{
+    border: 1px solid red;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*  -clear: both - 
+    층을 나눠주는거랑 동일함 / 
+    html에서 작성하는것처럼 작성하면 됨
+    html에서는 유지보수 측면에서 쓸모없는 태그를 안좋아함
+    그래서 html에 작성하는것보다 css에 작성해주는게 좋음
+*/
+
+.logo{
+    border: 1px solid red;
+    
+    width: 100px;
+    /* margin: auto; */
+    display: inline-block;
+}
+
+.header {
+    text-align: center;
+}
+
+.left, .right{
+    line-height: 100px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li</title>
+    <style>
+        ul {
+            /*앞에 있는 쩜 뺴는 방법 및 여백 지우는 방법*/
+            list-style: none;
+            padding-left: 0;
+        }
+        table {
+            /* order: 1px solid red; */
+
+            border-collapse: collapse; 
+            /*collapse - 테이블이 딱붙는다/의미없는 빈칸을 지워준다.*/
+            text-align: center;
+        }
+         /*tr {
+            줄치는거 안됨 기능이 없음 / tr은 css가 먹는거 없다 / 쓰지말아라
+            border: 1px solid blue;
+            width: 100px;
+        }*/
+        td {
+            border-bottom: 1px dotted black;
+            /*밑줄을 쩜쩜으로 변경하는 방법이 bottom - dotted 임*/
+            width: 20px;
+            height: 40px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    <hr>
+
+    <table>
+        <!--모바일에 최적화 되지 않음/ 모바일에 최적화 할라면 table이 적당하지 않다.-->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+</body>
+</html>

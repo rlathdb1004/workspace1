@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+   <style>
+    .v {
+        /* display: none; */
+        /* 공간은 남아있고 요소는 사라짐 */
+        visibility: hidden;
+    }
+    .a:hover + .v {
+        /* 요소가 없어서 적용 안됨 */
+        visibility: visible;
+    }
+
+    .op{
+        /* 
+        opacity- 투명도를 줄수있음 
+        안보이는게 아니라 투명도설정으로 0으로 하면 투명도가 없음
+        */
+        opacity: 0.5;
+        opacity: 0;
+        opacity: 1;
+    }
+    
+    .op:hover{
+        /*hover를 줬기 때문에 누르면 진하게 바뀜*/
+        opacity: 1;
+    }
+
+    .box{
+        border: 1px solid red;
+        height: 110px;
+        width: 100px;
+        margin: 10px;
+    }
+    .of-hidden {
+        /*그냥 가려짐 넘쳐나는 글을 보여주지 않음*/
+        overflow: hidden;
+    }
+    .of-scroll {
+        /* 스트롤이 나타남, 위아래 좌우 x,y도 사용가능 함 */
+        overflow: scroll;
+
+    }
+    .of-auto {
+        overflow: auto;
+    }
+    .parent div{
+        border: 1px solid brown;
+        display: inline-block;
+        width: 100px;
+        margin: 5px;
+    }
+    .parent {
+        border: 1px solid blue;
+        width: 300px;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+
+
+
+
+   </style>
+
+</head>
+<body>
+   <div class="a">윗줄</div>
+   <div class="v">중간줄</div>
+   <div>아래줄</div> 
+
+   <hr>
+
+   <div>윗줄</div>
+   <div class="op">중간줄</div>
+   <div>아래줄</div> 
+
+    <hr>
+
+    <div class="box of-hidden" title="원문">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium dolore consequuntur nobis ab eum, aperiam impedit quia temporibus! Dicta sunt quod soluta perspiciatis ducimus laudantium dolores commodi porro possimus?
+    </div>
+ 
+    <div class="box of-scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate necessitatibus suscipit excepturi neque, totam placeat pariatur libero obcaecati mollitia atque nesciunt modi deserunt rerum sequi, provident, doloribus dolorum itaque deleniti?
+    </div>
+
+    <div class="box of-auto">
+        Lorem 
+    </div>
+    <div class="parent">
+        <div>항목1</div>
+        <div>항목2</div>
+        <div>항목3</div>
+        <div>항목4</div>
+        <div>항목5</div>
+    </div>
+
+    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

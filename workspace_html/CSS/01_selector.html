@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  css주석  */
+
+        /* 전체 선택자*/
+        *{
+            color : red;
+        }
+
+        /* tag 선택자 */
+        h2{
+            font-size: 400%;
+        }
+        h1{
+            font-size: 400%;
+        }
+         /* ,로 구분해서 여러개 적용 가능 */
+        h1,h2{ 
+            font-size:400%;
+        }
+        
+        /* class 선택자 */
+
+        .c1 {
+            background-color: green;
+        }
+        .bigtext{
+            font-size: 30px;
+        }
+
+        /* id 선택자 */
+        #i1{
+            color: rgb(0, 0, 0);
+        }
+
+         /* 자식 선택자(div > strong 바로 밑에가 스트롱일떄 적용됨)*/
+         div > strong {
+            background-color: dodgerblue;
+        }
+        /* 자손 선택자 실무에서 많이 사용함*/
+        div strong{
+            border: 3px solid red;
+        }
+
+       /*  속성 선택자*/
+
+       /*  속성이 있으면*/
+       [readonly] {
+        background-color: yellow;
+       }
+
+        /*  속성의 값이 일치하면*/
+       [type=text] {
+        background-color: yellow;
+       }
+
+       /*  #i1은 [id=i1]의 줄임말이다*/
+       [id=i1] {
+        background-color: yellow;
+       }
+
+       /* http로 값이 시작되는 것들 (like 검색처럼) */
+       [href^=https]{
+        background-color: pink;
+       }
+       
+       [id^=title_]{
+        background-color: pink;
+       }
+        /* $=값으로 끝나는 모든 것  */
+       [id$=title_]{
+        background-color: yellow;
+       }
+        /* 띄어쓰가로 구분되어 값을 포함하는 것/실무에서 많이 사용하지 않기  */
+        /* .c1은 [class~=c1]의 줄임말/~표시의 의미 */
+        [class~=c1]{
+            color: yellow;
+        }
+
+        /* 딱 붙여서 사용하면 and 조건이 된다 */
+        input[readonly]{ color: red; }
+        input[type=text]{ color: red; }
+        a.c2{ color: red; }
+        li.c1.c2{ color: red; }
+       
+        /* hover 마우스를 올려놓고 클릭안해도 색상 변경 됨 */
+        #div1:hover{
+            background-color: yellow;
+        }
+
+        /* active 클릭했을때 색상 변경 됨 */
+        #div1:active {
+            background-color: aqua;
+        }
+
+        .text1:focus {
+            background-color: yellow;
+        }
+
+    #UL1>LI:NTH-child(4){
+        background-color: aqua; 
+    }
+
+    #UL1>LI:NTH-child(2n-1){
+        background-color: gray; 
+    }
+     /* 자바스크립트에서는 아래 두개는 건드릴수 없다 before, after */
+    h3:after{
+        content: " AFTER";
+        color:black;
+    }
+    h3:before{
+        content: " BEFORE";
+        color:blue;
+        font-size: 14px;
+    }
+    #ul1 li:not(.c2) {
+        font-size: 52px ;
+    } 
+
+     /* 드래그 됐을떄 색갈 변함 앞에 *은 생략 가능함 제외하면 모든것이 라고 함  */
+    /* --*::selection 혹은 ::selection*/
+    *::selection{
+        background-color: aqua;
+    }
+
+    input[type=checkbox]:checked {
+        width:30px;
+        height:30px;
+    }
+   /* text-decoration: line-through 줄그어줌 */
+    input[type=checkbox]:checked + span {
+        text-decoration: line-through;
+    }
+
+    /* 우선순위
+        !important > style 속성 > #id선택자 > 속성선택자 = .class선택자 > 태그선택자 > 전체선택자 > 브라우저 기본값이 제일 힘이 없다  
+        동등한 우선 순위 일때 
+         나중에 나온 것이 덮어 쓴다*/
+
+        #id2{
+            color: purple;
+        }
+
+        .class1{
+             color: pink;
+        }
+
+        div{
+            color: blue;
+            font-size: 32px;
+        }
+        /* !important - 내가 우선순위임! 이라는 명령어 */
+
+        div{
+            color: skyblue !important;
+        }
+
+        [data-human]{
+             color: coral;
+        }
+
+
+    </style>
+</head>
+<body> <!--헬로월드 기본 인사 모든 개발자들이 사용하는 인사임-->
+  
+    <h1>hello world</h1> 
+    <h2>부제목</h2> 
+    <ul> <!--id는 구분하려고 넣는거라 딱 하나만 작성한다.-->
+        <li class="c1" id="i1"> li 1 </li>
+        <li class="c1 bigtext"> li 2 </li>
+        <li > li 3 </li>
+    </ul>
+    
+    <strong> 밖에 있는 strong</strong>
+    <div>
+        <strong> div안에 strong </strong>
+    </div>
+    <div>
+        <a href="">
+            <strong> div > a > strong </strong>
+        </a>
+    </div>
+
+    <input type="text"><br>
+    <input type="password"><br>
+    <a href="http://...">http</a>
+    <a href="https://...">https</a>
+
+    <!--table>tr*3>td*3 하면 테이블이 만들어짐-->
+    <table>
+        <tr>
+            <td class="no"> NO</td>
+            <td id="title_0">제목</td>
+            <td>글쓴이</td>
+        </tr>
+        <tr>
+            <td class="no">2</td>
+            <td id="title_2">제목2</td>
+            <td>글쓴이2</td>
+        </tr>
+        <tr>
+            <td class="no">1</td>
+            <td id="title_1">제목1</td>
+            <td>글쓴이1</td>
+        </tr>
+    </table>
+    <div id="div1">
+        hover 연습
+    </div>
+
+    focus 연습 : <input type="number" class="text1">
+
+    <UL ID="ul1">
+        <LI class="c2">1</LI>
+        <LI class="c2">2</LI>
+        <LI>3</LI>
+        <LI>4</LI>
+        <LI>5</LI>
+    </UL>
+
+    <h3>abcd</h3>
+
+    <input type="checkbox"> <span> 복습 </span><br>
+    <input type="checkbox"> <span> 야식 </span><br>
+
+    <div id="id2" class="class1" data-human="천안" style="color: brown">
+        우선 순위 연습
+    </div>
+
+
+</body>
+</html>

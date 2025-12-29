@@ -1,0 +1,79 @@
+#div1{
+    border: 1px solid red;
+}
+.block{
+    border: 1px solid red;
+    width: 100px;
+    height: 50px;
+    margin: 10px auto; /*margin 0 auto - 위아래 마진은 0이고 좌우는 오토이다*/
+}
+.inline{
+    border: 1px solid red;
+    /*inline- 넓이, 높이를 줄수 없다 */
+    width: 200px;
+    height: 100px;
+    
+    /*inline- 마진에서 상하는 적용 안되고 좌우만 적용 된다 */
+    margin: 30px 50px;
+
+    /*inline- 좌우 패딩은 가능하나 상하는 적용안됨 그런데 border는 밀어짐*/
+    padding: 30px 50px;
+
+    /* display: block; */
+    background-color: green;
+    /*인라인안에는 블럭을 쓰지 않는다*/
+}
+
+.parent{
+    border: 1px dotted rgb(255,0,255);
+
+    /* width: 400px; */
+    text-align: center;
+}
+
+.parent > div {
+    border: 1px solid red;
+    
+    display: inline-block;
+    /* width: 100px; */
+    width: 300px;
+    height: 50px;
+
+    margin: 30px;
+    /* margin: auto; */
+    padding: 50px;
+}
+
+.parent2 {
+    border: 1px dotted rgb(255,0,255);
+    font-size: 0;
+}
+
+.parent2 > div {
+    border: 1px solid red;
+    
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+
+    /* inline, inline-block에서만 사용해야지 적용됨*/
+    vertical-align: top;
+    font-size: 16px; /*박스 붙히기 희망하면 div에서 띄어쓰기를 지우던가 아니면 부모 글씨를 쭐이고 자식 글씨를 키운다.*/
+}
+
+.hide{
+    display: none; /*계획한 단계를 제외해 버린다.*/
+}
+
+.table{
+    display: table-cell;
+}
+
+.table .td{
+    display: table-cell;/*table-cell일떄만 vertical-aligㅜ이 작동함 */
+
+    border: 1px solid red;
+    height: 100px;
+
+    vertical-align: middle;
+}
