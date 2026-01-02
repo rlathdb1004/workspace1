@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            color: white;
+            margin: 10px;
+
+            transition: all 0.5s;
+        }
+
+        .translate:hover {
+            transform: translate(10px,20px); /*준 만큼 만큼 이동한다 포지션이랑 비슷하다*/
+            transform: translate(50%,50%); /*%사용도 가능함 / 원래 있던 위치의 50% 정가운데로 내려옴*/
+        }
+
+        .scale {
+            transform: scale(1.3); /*1이 백프로임 / 몇 배만 가능함*/
+            transform: scaleX(1.3); /*X쓰면 가로로만 넓어짐 / 위치는 이동하지 않음 원래 자리에서 이동함*/
+        }
+        .rotate {
+            transform: rotate(30deg); /*각도-deg / 각도를 명시하는 단위임 돌릴수 있음*/
+        }
+
+        .skew {
+            transform: skew(10deg, -30deg);
+        }
+
+        .total {
+            transform: translate(50%,50%) scale(1.3) rotate(-30deg)
+        }
+
+        .parent {
+            width: 40%;
+            height: 30vh;
+            border: 1px solid red;
+
+            position: relative;
+
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%); 
+            /*부모의 넓이 의 절반 내 넓이의 절반까지 하면 딱 정중앙에 옴 가로세로 정렬이 됨 / 누적코드*/
+        }
+
+        .box {
+            transition: all 0.5s; /*all 모두다 0.5초 동안 바뀌길 원한다.숫자가 쩍으면 빨라진다.스무스하게 움직인다.*/
+        }
+
+        .box:hover {
+            width: 200px;
+            background-color: red;
+            border-radius: 20px;
+           /* transition: all 0.5s; 호버에 들어가면 팍팍 진행됨. */
+        }
+
+
+        .box2 {
+            border: 1px solid red;
+            height: 50vh;
+
+            background-image: linear-gradient(135deg, red 20% 50%, green 80%, blue 100% );
+            /*방향 or 각도deg, 색상(색, 거리%), 색상(색, 거리%)*/
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">비교</div>
+    <div class="box translate">translate</div>
+    <div class="box scale">scale</div>
+    <div class="box rotate">rotate</div>
+    <div class="box skew">skew</div>
+    <div class="box total">total</div>
+<br><br><br><br><br>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <br><br><br><br><br>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <div class="box2"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

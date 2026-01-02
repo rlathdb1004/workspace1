@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DevBook </title>
+    <style>
+        #wrap div {
+            border: 1px solid red;
+        }
+
+        #wrap {
+            border: 1px solid red;
+            display: inline-block;
+            width: 1200px;
+            height: 800px;
+            font-size: 24PX;
+        }
+
+        .hp1 {
+            border-radius: 50px;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+            /*정중앙에 오게 만들어준다 / 글씨 한줄이 차지하는 높이*/
+            text-align: center;
+            /*글씨를 중간으로 보내준다*/
+            background-color: #ed6524;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 900;
+            color: white;
+        }
+
+        .hp2 {
+            border-radius: 50px;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ed6524;
+            color: #ed6524;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .hp2:hover {
+            background-color: #ed6524;
+            color: white;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .right,
+        .left {
+            width: 550px;
+            display: inline-block;
+            font-size: 24px;
+            vertical-align: top;
+            padding-left: 30px;
+            padding-top: 50px;
+        }
+
+        .left {
+            padding-top: 100px;
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            /*하이퍼링크 밑줄 지워주는거*/
+            color: black;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .li1 {
+            display: none;
+        }
+
+        .foint {
+            /* display: none; */
+            position: absolute;
+        }
+
+        .foint:hover .li1 {
+            display: block;
+
+        }
+
+        .font1 {
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .font2 {
+            font-size: 1.125rem;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .font3 {
+            border: 1px solid white;
+            background-color: rgba(211, 211, 211, 0.904);
+            border-left: 6px solid #ed6524;
+            font-size: 15px;
+            margin-top: 50px;
+            line-height: 30px;
+            font-style: italic;
+        }
+
+        .font3-1 {
+            border: 1px solid white;
+            background-color: rgba(211, 211, 211, 0.904);
+            border-left: 6px solid #ed6524;
+            font-size: 15px;
+            margin-top: 50px;
+            line-height: 30px;
+            font-style: italic;
+            display: flex;
+        }
+
+
+        .font4 {
+            display: inline-block;
+            font-size: 16px;
+            vertical-align: top;
+            height: 60px;
+            margin-top: 20px;
+        }
+
+        .img1 {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+        }
+
+        .img2 {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .font5 {
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            background-color: #5cb377;
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            line-height: 40px;
+            color: white;
+            position: absolute;
+            left: 440px;
+            top: 17px;
+        }
+
+        .font6 {
+            font-size: 16px;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>
+            <a class="logo" href="">
+                <img src="https://demos.onepagelove.com/html/devbook/assets/images/site-logo.svg">
+                <strong> DevBook </strong>
+            </a>
+        </div>
+        <div class="left">
+            <div class="font1">
+                Free Book & eBook <br>
+                Landing Page Template</div>
+            <div class="font2">A free Bootstrap 4 template for developers and programmers who want to self-publish
+                books. Download now and start selling your book right away! </div>
+            <div class="hp1">
+                <a
+                    href="https://themes.3rdwavemedia.com/bootstrap-templates/product/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">
+                    Buy for $20</a>
+            </div>
+            <div class="hp2">learn more </div>
+            <!-- ul s -->
+            <ul>
+                <li class="li1">
+                    <div class="font3">
+                        <br>"Excellent Book! Add your book reviews here consectetur adipiscing elit. Aliquam euismod
+                        nunc porta
+                        urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae, auctor imperdiet nisi."
+                        <br><br>
+                    </div>
+                    <div class="img1">
+                        <img src="https://demos.onepagelove.com/html/devbook/assets/images/profiles/profile-1.png"
+                            width="60px" height="60px">
+                    </div>
+                    <div class="font4">James Doe <br>Co-Founder, Startup Week</div>
+                </li>
+                <div class="foint"> ○ </div>
+            </ul>
+            <ul>
+                
+                <li class="li2">
+                    <div class="font3-1">
+                        <br>"Highly recommended consectetur adipiscing elit. Proin et auctor dolor, sed venenatis massa.
+                        Vestibulum ullamcorper lobortis nisi non placerat praesent mauris neque"
+                        <br><br>
+                    </div>
+                    <div class="img1-1">
+                        <img src="https://demos.onepagelove.com/html/devbook/assets/images/profiles/profile-2.png"
+                            width="60px" height="60px">
+                    </div>
+                    <div class="font4">James Doe <br>Senior Developer, Ipsum Company</div>
+                    <div class="foint"> ○ </div>
+            </ul>
+            <ul>
+                </li>
+                <li class="li3">
+                    <div class="font3-1">
+                        <br>"Awesome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod nunc
+                        porta urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae."
+                        <br><br>
+                    </div>
+                    <div class="img1-1">
+                        <img src="https://demos.onepagelove.com/html/devbook/assets/images/profiles/profile-3.png"
+                            width="60px" height="60px">
+                    </div>
+                    <div class="font4">Andy Doe <br>Frontend Developer, Company Lorem</div>
+                    <div class="foint"> ○ </div>
+                </li>
+                <!-- <li class="li4">
+                    <div> ○ </div>
+                    <div> ○ </div> 
+                    <div> ○ </div> -->
+                
+                </li>
+            </ul>
+            <!-- ul e -->
+
+            <!-- <div class="font3">
+                <br>"Excellent Book! Add your book reviews here consectetur adipiscing elit. Aliquam euismod nunc porta
+                urna
+                facilisis tempor. Praesent mauris neque, viverra quis erat vitae, auctor imperdiet nisi."
+                <br><br>
+            </div>
+            <div class="img1">
+                <img src="https://demos.onepagelove.com/html/devbook/assets/images/profiles/profile-1.png" width="60px"
+                    height="60px">
+            </div>
+            <div class="font4">James Doe <br>Co-Founder, Startup Week</div>
+        </div> -->
+
+            <div class="right">
+                <div class="img2">
+                    <img src="https://demos.onepagelove.com/html/devbook/assets/images/devbook-cover.png" width="520px"
+                        height="650px">
+                    <div class="font6">
+                        <a href=""> </a>
+                        See all book reviews
+                    </div>
+                </div>
+                <div class="font5">New Release </div>
+            </div>
+        </div>
+</body>
+
+</html>

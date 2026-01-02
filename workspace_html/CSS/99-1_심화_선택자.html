@@ -1,0 +1,107 @@
+<html >
+    <head>
+        <style>
+            h1 {
+                color: red; /*h1의 글씨 색을 빨간색으로 변경하고 싶다*/
+            }
+            h2 {
+                color: blue;
+            }
+            #abc {
+                color: brown;
+            }
+            .red {
+                color: red;
+            }
+            .big {
+                font-size: 32px;
+            }
+            div span { /*div 자손중에 span을 찾아서 글씨를 빨간색으로 변경해라*/
+                color: red;
+            }
+
+            .box2 p { /*box2에 있는 p태그의 글씨에 빨간색을 줘라/최대한 띄어쓰기 줘라 */
+                color: red;
+            }
+            
+            div.box2 p { /*div 박스 안에 있는 box2만 블루로 바꿔라 */
+                color: blue;
+            }
+
+            [href=a1] {
+                color: red;
+            }
+            
+            #div1 {
+                color: red;
+            }
+
+            #div1:hover {
+                color: blue;
+            }
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1> hello world </h1>    
+        <h2> h2-1 </h2>    
+        <h2 id="abc"> h2-2 </h2>    
+
+        <P class="big">
+            단락1
+        </P>
+        <P class="red">
+            단락2
+        </P>
+        <P class="red">
+            단락3
+        </P>
+
+        <div>
+            <p>
+                <span>div 안의 P안의 span</span>
+            </p>
+        </div>
+        <div>
+            <span>a 안의 span</span>
+        </div>
+        <span> 밖에 있는 span</span>
+
+        <hr>
+
+        <div class="box1">
+            <p>
+                1번 문단
+            </p>
+        </div>
+        <div class="box2">
+            <p>
+                2번 문단
+            </p>
+        </div>
+
+        <section class="box2">
+            <p>
+                3번 문단
+            </p>
+
+        </section>
+        
+        <hr>
+
+        <a href="a1">a1</a>
+        <a href="a2">a2</a>
+        
+        <hr>
+
+        <div id="div1">
+            글씨
+
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
