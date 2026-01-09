@@ -7,12 +7,13 @@
     <title> DevBook </title>
     <style>
         #wrap div {
-            border: 1px solid red;
+            /* border: 1px solid red; */
         }
 
         #wrap {
-            border: 1px solid red;
-            display: inline-block;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
             width: 1200px;
             height: 800px;
             font-size: 24PX;
@@ -57,7 +58,7 @@
         .right,
         .left {
             width: 550px;
-            display: inline-block;
+            /* display: inline-block; */
             font-size: 24px;
             vertical-align: top;
             padding-left: 30px;
@@ -81,22 +82,90 @@
         }
 
         ul {
+            position: relative;
             list-style: none;
             padding-left: 0;
+            display: flex;
         }
+
+
+
+
+        /* .ft1-1 {
+            position: absolute;
+            transform: translate(100%, 0);
+            z-index: 9999;
+            display: inline-block;
+            padding: 6px;
+        }
+
         .li1 {
             display: none;
         }
 
-        .foint {
-            /* display: none; */
-            position: absolute;
-        }
-
-        .foint:hover + .li1 {
+        .ft1-1:hover+.li1, .li1:hover {
             display: block;
+        }
+
+        .ft1-2 {
+            position: absolute;
+            transform: translate(100%, 0);
+            z-index: 9999;
+            display: inline-block;
+            padding: 6px;
+        }
+
+        .li2 {
+            display: none;
+        }
+
+        .ft1-2:hover+.li2, .li2:hover {
+            display: block;
+        }
+
+        .li3 {
+            display: none;
+        }
+
+        .ft1-3:hover+.li3, .li3:hover {
+            display: block;
+        }
+
+        .ft1-1,
+        .ft1-2,
+        .ft1-3 {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        } */
+
+        /* .li1, .li2, .li3 { 
+            display: none;
+            position: absolute;
+            left: 0;
+            top: -220px
+            } */
+
+        /* .ft1-1 {
+            position: absolute;
+            transform: translate(100%, 0);
+            z-index: 10;
 
         }
+
+        .ft1-2 {
+            position: absolute;
+            transform: translate(100%, 0);
+            z-index: 10;
+            margin-left: 20%;
+        }
+
+        .ft1-3 {
+            position: absolute;
+            transform: translate(200%, 0);
+            z-index: 10;
+            margin-left: 100%; */
+        /* } */
 
         .font1 {
             font-weight: 700;
@@ -147,7 +216,7 @@
 
         .right {
             display: inline-block;
-            position: absolute;
+            /* position: absolute; */
         }
 
         .img2 {
@@ -166,8 +235,8 @@
             line-height: 40px;
             color: white;
             position: absolute;
-            left: 440px;
-            top: 17px;
+            right: 80px;
+            top: 50px;
         }
 
         .font6 {
@@ -175,17 +244,22 @@
             text-align: center;
             text-decoration: underline;
         }
+
+        .aa2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 
 <body>
+    <div>
+        <a class="logo" href="">
+            <img src="https://demos.onepagelove.com/html/devbook/assets/images/site-logo.svg">
+            <strong> DevBook </strong>
+        </a>
+    </div>
     <div id="wrap">
-        <div>
-            <a class="logo" href="">
-                <img src="https://demos.onepagelove.com/html/devbook/assets/images/site-logo.svg">
-                <strong> DevBook </strong>
-            </a>
-        </div>
         <div class="left">
             <div class="font1">
                 Free Book & eBook <br>
@@ -198,9 +272,28 @@
                     Buy for $20</a>
             </div>
             <div class="hp2">learn more </div>
-            <!-- ul s -->
+
             <ul>
-                <li class="li1">
+                <li class="li1 aa2">
+                    <div class="font3">
+                        <br>"Excellent Book! Add your book reviews here consectetur adipiscing elit. Aliquam euismod
+                        nunc porta
+                        urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae, auctor imperdiet nisi."
+                        <br><br>
+                    </div>
+                    <div class="man">
+                    <div class="img1">
+                        <img src="https://demos.onepagelove.com/html/devbook/assets/images/profiles/profile-1.png"
+                            width="60px" height="60px">
+                    </div>
+                    <div class="font4">James Doe <br>Co-Founder, Startup Week</div>
+                    </div>
+                    <!-- <li class="foint ft1-1"> ○ </li> -->
+                </li>
+            </ul>
+            <!-- <ul>
+                <li class="foint ft1-1"> ○ </li>
+                <li class="li1 aa2">
                     <div class="font3">
                         <br>"Excellent Book! Add your book reviews here consectetur adipiscing elit. Aliquam euismod
                         nunc porta
@@ -212,12 +305,9 @@
                             width="60px" height="60px">
                     </div>
                     <div class="font4">James Doe <br>Co-Founder, Startup Week</div>
-                </li>
-                <div class="foint"> ○ </div>
-            </ul>
-            <ul>
-                
-                <li class="li2">
+                </li> -->
+            <!-- <li class="foint ft1-2"> ○ </li>
+                <li class="li2 aa2">
                     <div class="font3-1">
                         <br>"Highly recommended consectetur adipiscing elit. Proin et auctor dolor, sed venenatis massa.
                         Vestibulum ullamcorper lobortis nisi non placerat praesent mauris neque"
@@ -228,11 +318,9 @@
                             width="60px" height="60px">
                     </div>
                     <div class="font4">James Doe <br>Senior Developer, Ipsum Company</div>
-                    <div class="foint"> ○ </div>
-            </ul>
-            <ul>
                 </li>
-                <li class="li3">
+                <li class="foint ft1-3"> ○ </li>
+                <li class="li3 aa2">
                     <div class="font3-1">
                         <br>"Awesome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod nunc
                         porta urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae."
@@ -243,15 +331,14 @@
                             width="60px" height="60px">
                     </div>
                     <div class="font4">Andy Doe <br>Frontend Developer, Company Lorem</div>
-                    <div class="foint"> ○ </div>
-                </li>
-                <!-- <li class="li4">
+                </li> -->
+            <!-- <li class="li4">
                     <div> ○ </div>
                     <div> ○ </div> 
                     <div> ○ </div> -->
-                
-                </li>
-            </ul>
+
+
+            <!-- </ul> -->
             <!-- ul e -->
 
             <!-- <div class="font3">
@@ -267,14 +354,15 @@
             <div class="font4">James Doe <br>Co-Founder, Startup Week</div>
         </div> -->
 
-            <div class="right">
-                <div class="img2">
-                    <img src="https://demos.onepagelove.com/html/devbook/assets/images/devbook-cover.png" width="520px"
-                        height="650px">
-                    <div class="font6">
-                        <a href=""> </a>
-                        See all book reviews
-                    </div>
+
+        </div>
+        <div class="right">
+            <div class="img2">
+                <img src="https://demos.onepagelove.com/html/devbook/assets/images/devbook-cover.png" width="520px"
+                    height="650px">
+                <div class="font6">
+                    <a href=""> </a>
+                    See all book reviews
                 </div>
                 <div class="font5">New Release </div>
             </div>
