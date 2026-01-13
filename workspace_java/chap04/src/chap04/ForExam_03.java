@@ -164,9 +164,9 @@ public class ForExam_03 {
 		
 		// 문제3
 		// 1 ~ 입력 받은 수까지 더하기
- 		 Scanner scan = new Scanner(System.in);
-	        int = scan.nextInt(); 
-	        System.out.print("총합 :" );
+// 		 Scanner scan = new Scanner(System.in);
+//	        int = scan.nextInt(); 
+//	        System.out.print("총합 :" );
 		
 
 		// -------조금 난이도-----------
